@@ -1,0 +1,3 @@
+#Here we define relationship between Mantis and JIRA users.
+#Format is "mantis_user_name=jira_user_name" For example:
+#admin=administrator

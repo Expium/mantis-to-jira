@@ -1,0 +1,30 @@
+#Limit for issue id. 0 disables limit
+issue.limit.id=0
+
+mantis.project.name=BEAR
+mantis.url=http://localhost/mantis
+mantis.username=administrator
+mantis.password=administrator
+#If you use private instance of mantis, JIRA cannot download file using file_download.php because of authentification.
+#You can use file_export.php to access files by id
+mantis.downloadUrl=http://localhost/mantis/file_export.php?file_id={0,number,#}
+
+jira.project.key=TEST
+jira.url=http://localhost:8080/
+jira.username=administrator
+jira.password=admin
+
+csv.filename=mantisExport.csv
+csv.ref.filename=refExport.csv
+csv.limit.comments=20
+csv.limit.attachments=10
+csv.stats.filename=usersStats.txt
+
+
+placeholder.summary=Placeholder {0}, please ignore
+placeholder.description=Placeholder {0}, please ignore
+
+#Default user is required in case some users are deleted or blocked in Mantis,
+#so there are no information about creator in comment or attachment
+user.default=Joe.Average
+user.unassigned=

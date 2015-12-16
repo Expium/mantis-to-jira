@@ -1,0 +1,15 @@
+/target
+/bin
+/mantisExport.csv
+.settings
+.project
+.classpath
+/usersStats.txt
+/users.properties
+/config.properties
+/refExport.csv
+/dependency-reduced-pom.xml
+*.tgz
+*.zip
+*.pdf
+PROD
