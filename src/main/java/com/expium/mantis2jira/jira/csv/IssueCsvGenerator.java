@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 
+import com.expium.mantis2jira.util.PropertiesUtil;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -32,8 +33,7 @@ public class IssueCsvGenerator {
 	public static final String LOGER_NAME = "CSV";
 	final static Logger log = LoggerFactory.getLogger(LOGER_NAME);
 
-	public static final String DATE_FORMAT = "dd/MM/yy hh:mm:ss";
-	private static final SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+	private static final SimpleDateFormat dateFormat = new SimpleDateFormat(PropertiesUtil.getMantisUrl());
 	{
 		dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 	}

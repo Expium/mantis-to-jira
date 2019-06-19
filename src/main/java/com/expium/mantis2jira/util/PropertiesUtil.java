@@ -75,6 +75,8 @@ public class PropertiesUtil {
 		return 0;
 	}
 
+	public static String getDateFormat() { return getStringProperty(DATE_FORMAT); }
+
 	public static String getMantisUrl() {
 		return getStringProperty(MANTIS_URL);
 	}
