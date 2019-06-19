@@ -75,7 +75,7 @@ Add the -users option for username mapping.
 Import the CSV data using the JIRA CSV import feature.
 This format supports many kinds of data for JIRA import, using an arcane format.
 
-You will need a CSV import configuration file; create one using the provided ```csv-importer-config``` file example.
+You will need a CSV import configuration file; create one using the provided ```csv-importer-config-example``` file example.
 
 ### 3) Import Task References to JIRA
 

@@ -1,5 +1,6 @@
 #Limit for issue id. 0 disables limit
 issue.limit.id=0
+issue.date=
 
 mantis.project.name=BEAR
 mantis.url=http://localhost/mantis
@@ -16,15 +17,15 @@ jira.password=admin
 
 csv.filename=mantisExport.csv
 csv.ref.filename=refExport.csv
-csv.limit.comments=20
-csv.limit.attachments=10
+csv.limit.comments=30
+csv.limit.attachments=15
 csv.stats.filename=usersStats.txt
 
 
-placeholder.summary=Placeholder {0}, please ignore
-placeholder.description=Placeholder {0}, please ignore
+placeholder.summary=#{0,number,#} Placeholder, please ignore
+placeholder.description=#{0,number,#} This is deleted issue.
 
 #Default user is required in case some users are deleted or blocked in Mantis,
 #so there are no information about creator in comment or attachment
-user.default=Joe.Average
+user.default=Example.User
 user.unassigned=

@@ -15,7 +15,8 @@ public class PropertiesUtil {
 	final static Logger log = LoggerFactory.getLogger(Mantis2JiraConverter.LOGER_NAME);
 	
 	private static final String ISSUE_ID_LIMIT = "issue.limit.id";
-	
+	private static final String DATE_FORMAT = "issue.date";
+
 	private static final String MANTIS_PROJECT_NAME = "mantis.project.name";
 	private static final String MANTIS_URL = "mantis.url";
 	private static final String MANTIS_USERNAME = "mantis.username";
