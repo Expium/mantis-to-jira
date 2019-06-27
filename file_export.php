@@ -29,7 +29,7 @@
 	  */
 	require_once( 'core.php' );
 
-	require_once( 'file_api.php' );
+	require_once( 'core/file_api.php' );
 	$f_show_inline = gpc_get_bool( 'show_inline', false );
 
 	# To prevent cross-domain inline hotlinking to attachments we require a CSRF

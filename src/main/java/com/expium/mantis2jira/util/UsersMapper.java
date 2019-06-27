@@ -14,8 +14,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.expium.mantis2jira.Mantis2JiraConverter;
-import com.google.common.collect.BiMap;
-import com.google.common.collect.HashBiMap;
 
 /**
  * This class is responsible for relationship between mantis bt usernames and
@@ -27,7 +25,7 @@ public class UsersMapper {
 	/*
 	 * Mantis username is key, jira username is value
 	 */
-	private BiMap<String, String> usersMap;
+	private HashMap<String, String> usersMap;
 	private String defaultUsername;
 	private String unassignedUser = "";
 
@@ -36,7 +34,7 @@ public class UsersMapper {
 	public UsersMapper(File file) throws FileNotFoundException, IOException {
 		Properties prop = new Properties();
 		prop.load(new FileInputStream(file));
-		usersMap = HashBiMap.create();
+		usersMap = new HashMap<String, String>();
 		for (Entry<Object, Object> entry : prop.entrySet()) {
 			String key = (String) entry.getKey();
 			String value = (String) entry.getValue();
@@ -45,7 +43,7 @@ public class UsersMapper {
 	}
 
 	public UsersMapper() {
-		usersMap = HashBiMap.create(1);
+		usersMap = new HashMap<String, String>();
 	}
 
 	public void setDefaultUser(String defaultUser) {

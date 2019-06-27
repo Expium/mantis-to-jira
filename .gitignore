@@ -1,15 +1,26 @@
-/target
+
+# Other
 /bin
-/mantisExport.csv
 .settings
 .project
 .classpath
-/usersStats.txt
-/users.properties
-/config.properties
-/refExport.csv
-/dependency-reduced-pom.xml
+PROD
 *.tgz
 *.zip
 *.pdf
-PROD
+
+# IDE
+/.idea
+/mantis2jira.iml
+
+# Maven
+/dependency-reduced-pom.xml
+/target
+
+# Generated
+/mantisExport.csv
+/refExport.csv
+/usersStats.txt
+/users.properties*
+/config.properties*
+!/config.properties.sample

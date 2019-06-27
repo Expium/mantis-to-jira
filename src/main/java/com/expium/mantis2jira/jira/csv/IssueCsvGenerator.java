@@ -1,7 +1,8 @@
 package com.expium.mantis2jira.jira.csv;
 
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.text.MessageFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 
+import com.expium.mantis2jira.util.PropertiesUtil;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -31,8 +33,7 @@ public class IssueCsvGenerator {
 	public static final String LOGER_NAME = "CSV";
 	final static Logger log = LoggerFactory.getLogger(LOGER_NAME);
 
-	public static final String DATE_FORMAT = "MM/dd/yy hh:mm:ss a";
-	private static final SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+	private static final SimpleDateFormat dateFormat = new SimpleDateFormat(PropertiesUtil.getMantisUrl());
 	{
 		dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 	}
@@ -91,7 +92,7 @@ public class IssueCsvGenerator {
 			throw new IllegalStateException("Issues csv filename cannot be empty");
 		}
 		try {
-			writer = new CSVWriter(new FileWriter(filename), SEPARATOR);
+			writer = new CSVWriter(new OutputStreamWriter(new FileOutputStream(filename), "UTF-8"), SEPARATOR);
 			writer.writeNext(header);
 		} catch (IOException e) {
 			log.error("Error on writing to file", e);
@@ -310,7 +311,7 @@ public class IssueCsvGenerator {
 				String text = ConvertUtil.replaceMantisLinks(comment.getText());
 				String user = usersMapper.getJiraUsername(comment.getUserName());
 				String date = dateFormat.format(comment.getCreated());
-				csvComments.add(MessageFormat.format("Comment: {0} : {1} :\n\n {2}", user, date, text));
+				csvComments.add(MessageFormat.format("{0}; {1}; {2}", date, user, text));
 			}
 		}
 

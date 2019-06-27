@@ -1,0 +1,104 @@
+{
+  "config.version" : "2.0",
+  "config.project.from.csv" : "false",
+  "config.encoding" : "UTF-8",
+  "config.email.suffix" : "@example.com",
+  "config.field.mappings" : {
+    "Status" : {
+      "jira.field" : "status"
+    },
+    "Assignee" : {
+      "jira.field" : "assignee"
+    },
+    "Issue type" : {
+      "jira.field" : "issuetype"
+    },
+    "Category" : {
+      "jira.field" : "components"
+    },
+    "Description" : {
+      "jira.field" : "description"
+    },
+    "Parent Id" : {
+      "jira.field" : "subtask-parent-id"
+    },
+    "Priority" : {
+      "jira.field" : "priority"
+    },
+    "Comments" : {
+      "jira.field" : "comment"
+    },
+    "Reporter" : {
+      "jira.field" : "reporter"
+    },
+    "Attachment" : {
+      "jira.field" : "attachment"
+    },
+    "Date Modified" : {
+      "jira.field" : "updated"
+    },
+    "Summary" : {
+      "jira.field" : "summary"
+    },
+    "Issue Id" : {
+      "jira.field" : "issue-id"
+    },
+    "Date Created" : {
+      "jira.field" : "created"
+    },
+    "Tags" : {
+      "jira.field" : "labels"
+    },
+    "Resolution" : {
+      "jira.field" : "resolution"
+    }
+  },
+  "config.value.mappings" : {
+    "Status" : {
+      "feedback" : "10002",
+      "new" : "10000",
+      "Placeholder" : "10001",
+      "acknowledged" : "3",
+      "closed" : "10001",
+      "assigned" : "10000",
+      "confirmed" : "3",
+      "resolved" : "10001"
+    },
+    "Issue type" : {
+      "SUB_TASK" : "10003",
+      "BUG" : "10200"
+    },
+    "Priority" : {
+      "SUPERURGENT" : "1",
+      "URGENT" : "2",
+      "HIGH" : "2",
+      "MEDIUM" : "3",
+      "LOW" : "4",
+      "EXTRA_LOW" : "5",
+      "NONE" : "3",
+      "NORMAL" : "3",
+      "ASAP" : "1"
+    },
+    "Resolution" : {
+      "reopened" : "<<blank>>",
+      "not fixable" : "10001",
+      "won't fix" : "10001",
+      "fixed" : "10000",
+      "duplicate" : "10002",
+      "unable to reproduce" : "10001",
+      "no change required" : "10001",
+      "suspended" : "10001",
+      "open" : "<<blank>>"
+    }
+  },
+  "config.delimiter" : ",",
+  "config.project" : {
+    "project.type" : null,
+    "project.key" : "WEB",
+    "project.description" : null,
+    "project.url" : null,
+    "project.name" : "Web development",
+    "project.lead" : null
+  },
+  "config.date.format" : "dd/MM/yy hh:mm:ss"
+}
