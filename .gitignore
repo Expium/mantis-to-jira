@@ -1,18 +1,26 @@
-/target
-/.idea
-/mantis2jira.iml
+
+# Other
 /bin
-/apache-maven-3.6.1
 .settings
 .project
 .classpath
-/usersStats.txt
-/users.properties*
-/config.properties*
-/refExport.csv
-/mantisExport.csv
-/dependency-reduced-pom.xml
+PROD
 *.tgz
 *.zip
 *.pdf
-PROD
+
+# IDE
+/.idea
+/mantis2jira.iml
+
+# Maven
+/dependency-reduced-pom.xml
+/target
+
+# Generated
+/mantisExport.csv
+/refExport.csv
+/usersStats.txt
+/users.properties*
+/config.properties*
+!/config.properties.sample
